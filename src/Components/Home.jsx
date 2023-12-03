@@ -2,7 +2,9 @@ import '../ComponentCss/Home.css'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <section className='home'>
+      <h1>home</h1>
+    </section>
   )
 }
 

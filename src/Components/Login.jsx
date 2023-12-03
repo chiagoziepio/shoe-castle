@@ -8,9 +8,9 @@ const Login = ({name,setName,setUser}) => {
   const handlepush = (e)=>{
     e.preventDefault();
     if(!name) return;
-    setUser({name:name})
+    setUser(name)
     navigate('/products')
-    
+    setName("")
   }
 
   

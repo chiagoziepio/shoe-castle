@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import{Routes, Route} from 'react-router-dom'
 import Layout from './Components/Layout'
 import Home from './Components/Home'
@@ -6,6 +6,7 @@ import Products from './Components/Products'
 import SingleProduct from './Components/SingleProduct'
 import Error from './Components/Error'
 import Login from './Components/Login'
+import Cart from './Components/Cart'
 
 
 import Protector from './Components/Protector'
@@ -13,6 +14,9 @@ import Protector from './Components/Protector'
 function App() {
   const [user, setUser] = useState(null)
   const [name,  setName] = useState("")
+  
+ 
+  
   
   return (
     <>
@@ -30,6 +34,7 @@ function App() {
           
          </Protector>} />
          <Route path='products/:productId' element={<SingleProduct user={user}/>}/>
+         <Route path = "cart" element={<Cart/>}/>
          <Route path='*' element={<Error/>}/>
        </Route>
           

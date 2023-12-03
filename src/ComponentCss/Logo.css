@@ -1,0 +1,16 @@
+.logo{
+    position: relative;
+    width: 50%;
+    color: #6b240c;
+    margin-left: 5px;
+    font-family: fantasy;
+   
+}
+.logo span{
+    position: absolute;
+   top: 20px;
+    left: 30px;
+    color: #994d1c;
+    font-family: cursive;
+    
+}

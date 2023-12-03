@@ -1,0 +1,29 @@
+.nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav ul .nav-item{
+    display: inline-block;
+    margin: 5px;
+    font-size: 17px;
+    
+}
+.nav ul .nav-item .nav-link{
+    text-decoration: none;
+    color: #994d1c;
+}
+.nav ul .nav-item .nav-link:hover{
+    text-decoration: underline;
+    
+}
+.nav ul .nav-item .nav-link.active{
+    color: #e48f45;
+}
+.nav .icons-container{
+    margin-left: 5px;
+    line-height: 40px;
+}
+.nav .icons-container .icon{
+    color:#6b240c;
+}

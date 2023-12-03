@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    width: 70%;
+    
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    position: relative;
+}
