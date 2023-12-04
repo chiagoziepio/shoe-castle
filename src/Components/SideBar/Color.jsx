@@ -30,9 +30,9 @@ const Color = () => {
       />
       <Label
        name = "sid3"
-       title='Red'
-       color= "red"
-       value = "red"
+       title='Brown'
+       color= "brown"
+       value = "brown"
       />
       <label className='sidebar-label-contaier'>
           <input type="radio" value ="white" name='sid3' />
