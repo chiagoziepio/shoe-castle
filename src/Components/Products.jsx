@@ -1,16 +1,29 @@
 import React from 'react'
 import '../ComponentCss/Products.css'
 import {Link} from 'react-router-dom'
-
-
+import Buttons from './Buttons'
+import Card from './Card'
+import SideBar from './SideBar/SideBar'
 
 const Products = ({user}) => {
   return (
-    <div>
-      <h1> Hello ,{user}</h1>
-        <h3>products</h3>
-      <Link to = '/'>back to home</Link>
-    </div>
+    <section className='products'>
+      <div className="products_sidebar">
+        <SideBar/>
+      </div>
+      <div className="products_body">
+        <div className="product_body_first">
+         <h1> Hello,{user}</h1>
+         <div className="products_btn"><Buttons/></div>
+      </div>
+        <div className='card-container'>
+          <div className="card"><Card/></div>
+        </div>
+        <Link to = '/'>back to home</Link>
+      </div>
+      
+      
+    </section>
   )
 }
 

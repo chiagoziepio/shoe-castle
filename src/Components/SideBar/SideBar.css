@@ -1,0 +1,12 @@
+.category_items{
+    display: flex;
+    flex-direction: column;
+}
+.price_items{
+    display: flex;
+    flex-direction: column;
+}
+.color-item{
+    display: flex;
+    flex-direction: column;
+}
