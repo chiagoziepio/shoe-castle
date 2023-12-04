@@ -2,6 +2,7 @@
     width: 50%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 .nav ul .nav-item{
     display: inline-block;
