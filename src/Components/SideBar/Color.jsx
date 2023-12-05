@@ -36,7 +36,7 @@ const Color = () => {
       />
       <label className='sidebar-label-contaier'>
           <input type="radio" value ="white" name='sid3' />
-          <span className='checkmark' ></span>White
+          <span className='checkmark white' ></span>White
       </label>
     </div>
   )

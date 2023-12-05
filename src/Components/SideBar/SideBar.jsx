@@ -6,8 +6,8 @@ import './Sidebar.css'
 
 const SideBar = () => {
   return (
-    <div>
-        <h3>sidebar</h3>
+    <div className='sidebar'>
+        <h3 className='sidebar-title'>sidebar</h3>
         <div className="category-section">
             <Category/>
         </div>

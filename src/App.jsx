@@ -12,10 +12,27 @@ import Cart from './Components/Cart'
 import Protector from './Components/Protector'
 
 function App() {
-  const [user, setUser] = useState(null)
-  const [name,  setName] = useState("")
+  const API_URL = "http://localhost:3500/products";
+  const [user, setUser] = useState(null);
+  const [name,  setName] = useState("");
+  const [datas, setDatas] = useState([])
   
- 
+ useEffect(()=>{
+  const fetchProducts = async()=>{
+    try{
+      const response = await fetch(API_URL);
+      if(!response.ok) throw Error("did not recieve expected data")
+      const data = await response.json();
+     
+      setDatas(data);
+      
+    }catch(Error){
+      console.log(`Error ${Error}`);
+    }
+
+  }
+  fetchProducts()
+ },[])
   
   
   return (
@@ -30,7 +47,10 @@ function App() {
           setUser={setUser}
          />}/>
          <Route path='products' element={<Protector user={user}>
-          <Products user={user} />
+          <Products 
+            user={user}
+            datas={datas} 
+          />
           
          </Protector>} />
          <Route path='products/:productId' element={<SingleProduct user={user}/>}/>
