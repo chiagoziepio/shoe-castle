@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const Card = ({data}) => {
   return (
-    <div className='card'>
+    <div className='card_items'>
       <img src={data.img} alt="" />
       <div className="product-details">
         <h3 className="product-title">{data.title}</h3>

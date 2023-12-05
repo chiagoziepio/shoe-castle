@@ -24,3 +24,8 @@
     display: flex;
     margin: 15px 0;
 }
+.products_body .card-container .card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
