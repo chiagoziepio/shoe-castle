@@ -13,6 +13,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     transition: transform .4s;
+    cursor: pointer;
 }
 .card_items img:hover{
     transform: scale(1.2);
@@ -39,6 +40,8 @@
     outline: none;
     cursor: pointer;
     transition: opacity .4s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .card_items .product-btn:hover{
     opacity: .7;

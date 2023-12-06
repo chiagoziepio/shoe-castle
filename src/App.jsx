@@ -15,6 +15,7 @@ function App() {
   const API_URL = "http://localhost:3500/products";
   const [user, setUser] = useState(null);
   const [name,  setName] = useState("");
+  const [email, setEmail] = useState("")
   const [datas, setDatas] = useState([])
   
  useEffect(()=>{
@@ -45,6 +46,8 @@ function App() {
           name={name}
           setName={setName}
           setUser={setUser}
+          email={email}
+          setEmail={setEmail}
          />}/>
          <Route path='products' element={<Protector user={user}>
           <Products 

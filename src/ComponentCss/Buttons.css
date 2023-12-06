@@ -1,0 +1,9 @@
+.recommended-btns{
+    margin: 10px;
+}
+.recommended-btns-btn{
+    width: 110px;
+    display: inline;
+    margin: 5px;
+    border-radius: 5px;
+}
