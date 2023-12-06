@@ -1,0 +1,18 @@
+.singleproduct{
+    flex-grow: 1;
+    width: 97vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singleproducts-image{
+    width: 250px;
+    height: 250px;
+    border: 1px solid #6b240c;
+    border-radius: 15px;
+    padding: 3px;
+}
+.singleproduct h3{
+    font-weight: 800;
+    margin-top: 10px;
+}

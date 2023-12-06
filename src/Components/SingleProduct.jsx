@@ -1,13 +1,29 @@
 import '../ComponentCss/SingleProduct.css'
-import {Link} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
-const SingleProduct = ({user}) => {
-  return (
-    <div>
-      <h1></h1>
-      <h3>singleproduct</h3>
-      <Link to='/products'>back</Link>
+
+const SingleProduct = ({datas}) => {
+  const theProduct = datas;
+  const { productId } = useParams();
+ 
+  const product = theProduct.find((product) => (product.id).toString() === productId )
+  
+  const {img,title} = product;
+  return (<>
+    <div className='singleproduct'>
+      
+      <div className="singleproducts-details">
+        <div className="singleproducts-image">
+          <img src={img} alt={title} />
+        </div>
+        
+        <h3>{title}</h3>
+      </div>
+      
+      
     </div>
+    
+    </>
   )
 }
 

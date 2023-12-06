@@ -1,10 +1,13 @@
 import '../ComponentCss/Card.css'
 import { AiFillStar } from "react-icons/ai";
-
+import { Link } from 'react-router-dom';
 const Card = ({data}) => {
   return (
     <div className='card_items'>
-      <img src={data.img} alt="" />
+      <Link to={`/products/${data.id}`}>
+        <img src={data.img} alt="" />
+      </Link>
+      
       <div className="product-details">
         <h3 className="product-title">{data.title}</h3>
         <div className="product-reviews">

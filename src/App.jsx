@@ -56,7 +56,7 @@ function App() {
           />
           
          </Protector>} />
-         <Route path='products/:productId' element={<SingleProduct user={user}/>}/>
+         <Route path='products/:productId' element={<SingleProduct user={user} datas={datas} />}/>
          <Route path = "cart" element={<Cart/>}/>
          <Route path='*' element={<Error/>}/>
        </Route>
