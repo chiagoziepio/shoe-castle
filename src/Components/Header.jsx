@@ -5,12 +5,12 @@ import Logo from './Logo'
 
 
 
-const Header = () => {
+const Header = ({cartItems}) => {
   return (
   <>
   <header className='header'>
     <Logo/>
-    <Nav/>
+    <Nav cartItems={cartItems} />
   </header>
     
     

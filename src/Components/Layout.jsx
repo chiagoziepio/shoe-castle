@@ -3,11 +3,11 @@ import Header from './Header'
 import '../ComponentCss/Layout.css'
 import Footer from './Footer'
 
-const Layout = () => {
+const Layout = ({cartItems}) => {
   return (
     <>
       <main className='layout'>
-        <Header/>
+        <Header cartItems={cartItems}/>
         <Outlet/>
         <Footer/>
       </main>

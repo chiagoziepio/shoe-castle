@@ -24,7 +24,15 @@
 .nav .icons-container{
     margin-left: 5px;
     line-height: 40px;
+    position: relative;
 }
 .nav .icons-container .icon{
     color:#6b240c;
+}
+
+.nav .icons-container .cartitem-number{
+    position: absolute;
+    font-size: 22px;
+   color: #e48f45;
+   
 }

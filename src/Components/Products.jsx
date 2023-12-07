@@ -5,7 +5,7 @@ import Buttons from './Buttons'
 import Card from './Card'
 import SideBar from './SideBar/SideBar'
 
-const Products = ({user,datas}) => {
+const Products = ({user,datas, handleAddToCart}) => {
   return (
     <section className='products'>
       <div className="products_sidebar">
@@ -22,6 +22,8 @@ const Products = ({user,datas}) => {
               <Card
                key={data.id}
                data={data}
+               handleAddToCart={handleAddToCart}
+               
               />
             ))}
           </div>

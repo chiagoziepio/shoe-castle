@@ -1,7 +1,7 @@
 import '../ComponentCss/Card.css'
 import { AiFillStar } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-const Card = ({data}) => {
+const Card = ({data, handleAddToCart}) => {
   return (
     <div className='card_items'>
       <Link to={`/products/${data.id}`}>
@@ -21,7 +21,7 @@ const Card = ({data}) => {
         </div>
         
       </div>
-      <button className= "product-btn">Add to cart</button>
+      <button onClick={()=> handleAddToCart(data)} className= "product-btn">Add to button</button>
     </div>
   )
 }

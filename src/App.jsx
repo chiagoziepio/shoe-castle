@@ -17,6 +17,8 @@ function App() {
   const [name,  setName] = useState("");
   const [email, setEmail] = useState("")
   const [datas, setDatas] = useState([])
+  const [cartItems, setCartItem] = useState([])
+  
   
  useEffect(()=>{
   const fetchProducts = async()=>{
@@ -35,12 +37,28 @@ function App() {
   fetchProducts()
  },[])
   
+ const handleAddToCart = (product)=>{
+    const productExist = cartItems.find((item) => item.id === product.id );
+    if(productExist) {
+      setCartItem( cartItems.map((item)= item.id === product.id? {...productExist, quantity: productExist.quantity + 1}: item))
+      
+    } else{
+      const newItem = {...product, quantity:1}
+      const newCartItems = [...cartItems, newItem]
+      setCartItem(newCartItems)
+      
+    }
+
+    
+ }
   
   return (
     <>
     
       <Routes>
-       <Route path='/' element={<Layout/>}>
+       <Route path='/' element={<Layout
+          cartItems ={cartItems.length}
+       />}>
          <Route index element={<Home/>}/>
          < Route path='login' element = {<Login
           name={name}
@@ -53,11 +71,15 @@ function App() {
           <Products 
             user={user}
             datas={datas} 
+            handleAddToCart ={handleAddToCart}
+            
           />
           
          </Protector>} />
          <Route path='products/:productId' element={<SingleProduct user={user} datas={datas} />}/>
-         <Route path = "cart" element={<Cart/>}/>
+         <Route path = "cart" element={<Cart
+            cartItems={cartItems}
+         />}/>
          <Route path='*' element={<Error/>}/>
        </Route>
           
