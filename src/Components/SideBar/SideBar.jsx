@@ -4,15 +4,15 @@ import Color from './Color'
 import Price from './Price'
 import './Sidebar.css'
 
-const SideBar = () => {
+const SideBar = ({handleRadioChange}) => {
   return (
     <div className='sidebar'>
         <h3 className='sidebar-title'>sidebar</h3>
         <div className="category-section">
-            <Category/>
+            <Category handleRadioChange={handleRadioChange}/>
         </div>
         <div className="price-section">
-            <Price/>
+            <Price handleRadioChange={handleRadioChange}/>
         </div>
        <div className="color-section">
        <    Color/>

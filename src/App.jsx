@@ -20,8 +20,9 @@ function App() {
   const [cartItems, setCartItem] = useState([])
   const [search, setSearch] = useState("")
   const [searchOutcome, setSearchOutcome]= useState([])
+  const [selectedCategory, setSelectedCategory] = useState(null)
   
-  
+  /* gettting our data from the the backend api */
  useEffect(()=>{
   const fetchProducts = async()=>{
     try{
@@ -38,7 +39,7 @@ function App() {
   }
   fetchProducts()
  },[])
-
+/* for input search filtering */
  useEffect(()=>{
  
  const searchResult= datas.filter(data=>((data.title).toLowerCase()).includes(search.toLowerCase())  )
@@ -46,6 +47,24 @@ function App() {
  
  },[datas,search])
   
+ /* button filtering */
+ const handleBtnClick =  (e)=>{
+   const elementValue = e.target.value;
+   const result = datas.filter(data => (data.company).toLowerCase() === elementValue.toLowerCase() )
+   
+   console.log(result);
+   setSearchOutcome(result)
+   
+    
+ }
+ /* radio filtering */
+ const handleRadioChange=(e)=>{
+  setSelectedCategory(e.target.value)
+  const result = datas.filter(data => (data.category).toLowerCase() === selectedCategory.toLowerCase() )
+  setSearchOutcome(result)
+   console.log(result);
+  console.log(selectedCategory);
+ }
  const handleAddToCart = (product)=>{
     const productExist = cartItems.find((item) => item.id === product.id );
     if(productExist) {
@@ -102,10 +121,12 @@ function App() {
             handleAddToCart ={handleAddToCart}
             search={search}
             setSearch={setSearch}
+            handleBtnClick={handleBtnClick}
+            handleRadioChange={handleRadioChange}
           />
           
          </Protector>} />
-         <Route path='products/:productId' element={<SingleProduct user={user}  />}/>
+         <Route path='products/:productId' element={<SingleProduct datas={datas}  />}/>
          <Route path = "cart" element={<Cart
             cartItems={cartItems}
             handleProductDecrement ={handleProductDecrement}

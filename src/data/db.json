@@ -36,7 +36,7 @@
   },
   {
     "img": "img/black-sneakers2.jpg",
-   "title": "Nike Running Shoe",
+   "title": "Adidas Running Shoe",
    "id": 4,
     "reviews": "(123 reviews)",
     "prevPrice": "$140,00",
@@ -47,7 +47,7 @@
   },
   {
     "img": "img/green-flats.jpg",
-   "title": "Flat Slip On Pumps",
+   "title": "Vans Flat Slip On Pumps",
    "id": 5,
    " reviews": "(123 reviews)",
     "prevPrice": "$140,00",
@@ -58,7 +58,7 @@
   },
   {
     "img": "img/black-flats.jpg",
-   "title": "Knit Ballet Flat",
+   "title": "Adidas Knit Ballet Flat",
    "id": 6,
    " reviews": "(123 reviews)",
     "prevPrice": "$140,00",
@@ -70,7 +70,7 @@
 
   {
     "img": "img/white-flats.jpg",
-   "title": "Loafer Flats",
+   "title": "Vans Loafer Flats",
    "id": 7,
    " reviews": "(123 reviews)",
     "prevPrice": "$140,00",
@@ -94,7 +94,7 @@
 
   {
     "img": "img/blue-sneakers.jpg",
-   "title": "Nike Men's Sneaker",
+   "title": "Adidas Men's Sneaker",
    "id": 9,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -117,7 +117,7 @@
   },
   {
     "img": "img/black-sneakers.jpg",
-   "title": "Pacer Future Sneaker",
+   "title": "Puma Pacer Future Sneaker",
    "id": 11,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -128,7 +128,7 @@
   },
   {
     "img": "img/black-sneakers3.jpg",
-   "title": "Unisex-Adult Super",
+   "title": "Puma Unisex-Adult Super",
    "id": 12,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -139,7 +139,7 @@
   },
   {
     "img": "img/white-sneakers2.jpg",
-   "title": "Roma Basic Sneaker",
+   "title": "Puma Roma Basic Sneaker",
    "id": 13,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -173,7 +173,7 @@
   },
   {
     "img": "img/brown-flats.jpg",
-   "title": "Rainbow Chex Skate",
+   "title": "Vans Rainbow Chex Skate",
    "id": 16,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -184,7 +184,7 @@
   },
   {
     "img": "img/white-sandals.jpg",
-   "title": "Low-Top Trainers",
+   "title": "Vans Low-Top Trainers",
    "id": 17,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -273,7 +273,7 @@
   },
   {
     "img": "img/black-heels4.jpg",
-   "title": "Chunky High Heel",
+   "title": " Adidas Chunky High Heel",
    "id": 25,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",
@@ -284,7 +284,7 @@
   },
   {
     "img": "img/white-flats2.jpg",
-   "title": "Amore Fashion Stilettos",
+   "title": " Adidas Amore Fashion Stilettos",
    "id": 26,
     "reviews": "(123 reviews)",
    "prevPrice": "$140,00",

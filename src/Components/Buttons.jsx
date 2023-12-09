@@ -1,6 +1,6 @@
 import '../ComponentCss/Buttons.css'
 
-const Buttons = ({search,setSearch}) => {
+const Buttons = ({search,setSearch,handleBtnClick}) => {
   return (
     <>
       <div className="input-search-container">
@@ -13,11 +13,11 @@ const Buttons = ({search,setSearch}) => {
       </div>
         <div className='recommended-btns'>
           <h3 className='recommended-title'>Recommended</h3>
-          <button type="button" className='recommended-btns-btn'>All</button>
-          <button type="button" className='recommended-btns-btn'>Addidas</button>
-          <button type="button" className='recommended-btns-btn'>Nike</button>
-          <button type="button" className='recommended-btns-btn'>Vans</button>
-          <button type="button" className='recommended-btns-btn'>Puma</button>
+          <button type="button" className='recommended-btns-btn'onClick={handleBtnClick} value={"all"}>All</button>
+          <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"adidas"}>Adidas</button>
+          <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"nike"}>Nike</button>
+          <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"vans"}>Vans</button>
+          <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"puma"}>Puma</button>
         </div>
     </>
   )
