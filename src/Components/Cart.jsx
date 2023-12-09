@@ -1,7 +1,7 @@
 import '../ComponentCss/Cart.css'
 import { Link } from 'react-router-dom'
 
-const Cart = ({cartItems}) => {
+const Cart = ({cartItems,handleProductDecrement,handleProductIncrement}) => {
   return (
     <section className='cart'>
       <div className="empty-cart-list">
@@ -28,12 +28,13 @@ const Cart = ({cartItems}) => {
                   <div className="cartproduct-title">{item.title}</div>
               </div>
               <div className="cartproduct-btns">
-                <span className='btn incrementBtn'>+</span>
-                <span className="btn decrementBtn">-</span>
+                <span className='btn incrementBtn' onClick={()=> handleProductIncrement(item)}>+</span>
+                <span className="btn decrementBtn" onClick={()=> handleProductDecrement(item)}>-</span>
               </div>
               <div className="cartproduct-quantity">
                 <label >{item.quantity} = </label>
                 <label >${item.quantity * item.newPrice}</label>
+                
               </div>
               
             </div>

@@ -5,7 +5,7 @@ import Buttons from './Buttons'
 import Card from './Card'
 import SideBar from './SideBar/SideBar'
 
-const Products = ({user,datas, handleAddToCart}) => {
+const Products = ({user,datas, handleAddToCart,search, setSearch}) => {
   return (
     <section className='products'>
       <div className="products_sidebar">
@@ -14,7 +14,7 @@ const Products = ({user,datas, handleAddToCart}) => {
       <div className="products_body">
         <div className="product_body_first">
          <h1> Hello,{user}</h1>
-         <div className="products_btn"><Buttons/></div>
+         <div className="products_btn"><Buttons search={search} setSearch={setSearch}/></div>
       </div>
         <div className='card-container'>
           <div className="card">
