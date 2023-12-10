@@ -5,15 +5,16 @@ import Buttons from './Buttons'
 import Card from './Card'
 import SideBar from './SideBar/SideBar'
 
-const Products = ({user,datas, handleAddToCart,search, setSearch,handleBtnClick,handleRadioChange}) => {
+const Products = ({user,datas, handleAddToCart,search, setSearch,handleBtnClick,handleRadioClick}) => {
+  const userEdited = user.toUpperCase()
   return (
     <section className='products'>
       <div className="products_sidebar">
-        <SideBar handleRadioChange={handleRadioChange}/>
+        <SideBar handleRadioClick={handleRadioClick}/>
       </div>
       <div className="products_body">
         <div className="product_body_first">
-         <h1> Hello,{user}</h1>
+         <h1 className='username'> Hello,<span>{userEdited}</span> </h1>
          <div className="products_btn"><Buttons search={search} setSearch={setSearch} handleBtnClick={handleBtnClick}/></div>
       </div>
         <div className='card-container'>

@@ -20,7 +20,7 @@ function App() {
   const [cartItems, setCartItem] = useState([])
   const [search, setSearch] = useState("")
   const [searchOutcome, setSearchOutcome]= useState([])
-  const [selectedCategory, setSelectedCategory] = useState(null)
+ 
   
   /* gettting our data from the the backend api */
  useEffect(()=>{
@@ -50,20 +50,22 @@ function App() {
  /* button filtering */
  const handleBtnClick =  (e)=>{
    const elementValue = e.target.value;
+   if(elementValue === "all") return setSearchOutcome(datas);
    const result = datas.filter(data => (data.company).toLowerCase() === elementValue.toLowerCase() )
-   
-   console.log(result);
    setSearchOutcome(result)
    
     
  }
  /* radio filtering */
- const handleRadioChange=(e)=>{
-  setSelectedCategory(e.target.value)
-  const result = datas.filter(data => (data.category).toLowerCase() === selectedCategory.toLowerCase() )
-  setSearchOutcome(result)
-   console.log(result);
-  console.log(selectedCategory);
+ const handleRadioClick=(e)=>{
+    const elementValue = e.target.value;
+    if(elementValue === "all") return setSearchOutcome(datas);
+   const result = datas.filter(data => (data.category).toLowerCase() === elementValue.toLowerCase() || (data.newPrice).toLowerCase() === elementValue.toLowerCase() || (data.color).toLowerCase() === elementValue.toLowerCase() )
+   setSearchOutcome(result)
+ }
+ /* cart clearance */
+ const handleCartclearance = ()=>{
+  setCartItem([])
  }
  const handleAddToCart = (product)=>{
     const productExist = cartItems.find((item) => item.id === product.id );
@@ -122,7 +124,7 @@ function App() {
             search={search}
             setSearch={setSearch}
             handleBtnClick={handleBtnClick}
-            handleRadioChange={handleRadioChange}
+            handleRadioClick={handleRadioClick}
           />
           
          </Protector>} />
@@ -131,6 +133,7 @@ function App() {
             cartItems={cartItems}
             handleProductDecrement ={handleProductDecrement}
             handleProductIncrement ={handleProductIncrement}
+            handleCartclearance={handleCartclearance}
          />}/>
          <Route path='*' element={<Error/>}/>
        </Route>

@@ -62,3 +62,12 @@
 .cartproducts-container .cartproduct .cartproduct-quantity label:nth-child(2)::after{
     content: ")";
 }
+.cart-totalPrice-cart-clearance{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cart-clearanceBtn{
+    width: 120px;
+    border-radius: 8px;
+
+}

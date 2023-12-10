@@ -1,7 +1,8 @@
 import '../ComponentCss/Cart.css'
 import { Link } from 'react-router-dom'
 
-const Cart = ({cartItems,handleProductDecrement,handleProductIncrement}) => {
+const Cart = ({cartItems,handleProductDecrement,handleProductIncrement,handleCartclearance}) => {
+  const totalPrice = cartItems.reduce((newPrice, item) => newPrice + item.quantity * item.newPrice, 0)
   return (
     <section className='cart'>
       <div className="empty-cart-list">
@@ -41,7 +42,17 @@ const Cart = ({cartItems,handleProductDecrement,handleProductIncrement}) => {
           ))}
           </div>
         }
-        
+        <div className="cart-totalPrice-cart-clearance">
+          <div className="totalPrice">
+            {cartItems.length > 0 && 
+              <h3>Total price = ${totalPrice}</h3>
+            }
+            
+          </div>
+          {cartItems.length > 1 &&
+            <button className="cart-clearanceBtn" onClick={handleCartclearance}>Clear cart</button>
+          }
+        </div>
         
       </div>
     </section>
