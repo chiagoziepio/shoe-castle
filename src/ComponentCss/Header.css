@@ -9,3 +9,11 @@
     left: 20%;
   
 }
+@media (max-width:620px) {
+    .header{
+        left: 9%;
+        width: 90%;
+       
+    }
+    
+}

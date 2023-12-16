@@ -21,7 +21,7 @@ const Card = ({data, handleAddToCart}) => {
         </div>
         
       </div>
-      <button onClick={()=> handleAddToCart(data)} className= "product-btn">Add to button</button>
+      <button onClick={()=> handleAddToCart(data)} className= "product-btn">Add to cart</button>
     </div>
   )
 }
