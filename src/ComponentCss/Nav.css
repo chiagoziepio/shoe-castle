@@ -46,6 +46,7 @@
 }
 .menuClose{
     color: white;
+    display:none;
 }
 @media (max-width: 620px){
     .menu-icon{
@@ -73,5 +74,8 @@
         display: block;
         margin: 10px;
         font-size: 20px;
+    }
+    .menuClose{
+        display:block;
     }
 }

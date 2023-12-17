@@ -32,3 +32,76 @@
 .username span{
     color: #e48f45;
 }
+.displaysidebar{
+    border: 1.5px solid #e48f45;
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    display: none;
+}
+.displaysidebar.hide{
+    display: none;
+}
+.products_sidebar.drop{
+    display: block;
+    animation-name: dropsidebar;
+    animation-duration: 5s;
+    
+}
+.sidebarCloseIcon{
+    color: white;
+    float: right;
+    margin-right: 7px;
+    display: none;
+}
+.sidebarIcon.hide{
+    display: none;
+}
+@keyframes dropsidebar{
+    0%{
+        transform: scaleY(0);
+    }
+    
+    25%{
+        transform: scaleY(0.9);
+        
+    }
+    75%{
+        transform: scaleY(1.1);
+        
+    }
+    100%{
+        transform: scaleY(1);
+        
+    }
+}
+
+@media (max-width:620px){
+    .products{
+        display: block;
+    }
+    .products_sidebar{
+        display: none;
+        background-color: #e48f45;
+        position: absolute;
+        top: 80px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 60vw;
+        
+    }
+    .products .products_body{
+        width: 100%;
+        margin-left: 15px;
+    }
+    .products .products_body .card-container{
+       margin-left: 7%;
+    }
+    .displaysidebar{
+        display: block;
+    }
+    .sidebarCloseIcon{
+        display: block;
+    }
+}

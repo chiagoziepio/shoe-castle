@@ -18,6 +18,7 @@ const Buttons = ({search,setSearch,handleBtnClick}) => {
           <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"nike"}>Nike</button>
           <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"vans"}>Vans</button>
           <button type="button" className='recommended-btns-btn'onClick={handleBtnClick}value={"puma"}>Puma</button>
+          
         </div>
     </>
   )

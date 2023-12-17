@@ -5,11 +5,9 @@ import { IoClose } from "react-icons/io5";
 import { useRef } from 'react';
 
 const Nav = ({cartItems}) => {
-  const ul = document.querySelector("ul")
-  const menuIcon = document.querySelector(".menu-icon")
+  
   const menuIconRef = useRef()
-  /* menuIconRef.current.classList.add("ok") 
-  console.log(menuIconRef.current.classList);*/
+  
   const ulRef = useRef()
   const closeiconRef = useRef()
   const handleMenuVisiblity = ()=>{
@@ -21,10 +19,7 @@ const Nav = ({cartItems}) => {
     ulRef.current.classList.remove("visible");
     menuIconRef.current.classList.remove("hide")
   }
-  /* menuIcon.addEventListener("click",()=>{
-    ul.classList.add("visible")
-    console.log("again");
-  }) */
+  
   return (
     <nav className='nav'>
       <ul className='ul' ref={ulRef}>
