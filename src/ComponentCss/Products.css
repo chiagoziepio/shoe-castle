@@ -46,7 +46,7 @@
 .products_sidebar.drop{
     display: block;
     animation-name: dropsidebar;
-    animation-duration: 5s;
+    animation-duration: 3s;
     
 }
 .sidebarCloseIcon{
@@ -60,13 +60,13 @@
 }
 @keyframes dropsidebar{
     0%{
-        transform: scaleY(0);
+        transform: scaleY(0) ;
     }
     
-    25%{
+    /* 25%{
         transform: scaleY(0.9);
         
-    }
+    } */
     75%{
         transform: scaleY(1.1);
         
@@ -89,6 +89,7 @@
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         width: 60vw;
+        height: 600px;
         
     }
     .products .products_body{

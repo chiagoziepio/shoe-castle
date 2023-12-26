@@ -13,6 +13,8 @@ import Protector from './Components/Protector'
 
 function App() {
   const API_URL = "http://localhost:3500/products";
+  /* this set is made live, json server link has been changed to point to the online server. the local server was deployed to render. The API_URL is the link for when it was still in the deveeloopment stage,while product_Server is for the production link */
+  const Product_Server = "https://server-ztr9.onrender.com/products"
   const [user, setUser] = useState(null);
   const [name,  setName] = useState("");
   const [email, setEmail] = useState("")
@@ -26,7 +28,7 @@ function App() {
  useEffect(()=>{
   const fetchProducts = async()=>{
     try{
-      const response = await fetch(API_URL);
+      const response = await fetch(Product_Server);
       if(!response.ok) throw Error("did not recieve expected data")
       const data = await response.json();
      

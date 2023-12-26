@@ -1,10 +1,16 @@
 footer{
     width: 100vw;
-    display: grid;
-    place-content: center;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 40px;
     background-color: #6b240c;
 }
 footer p{
     font-size: 20px;
+    margin-right: 10px;
+}
+footer .githubLink a{
+    font-size: 20px;
+    color: #e48f45;
 }
