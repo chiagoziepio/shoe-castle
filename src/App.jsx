@@ -13,7 +13,7 @@ import Protector from './Components/Protector'
 
 function App() {
   const API_URL = "http://localhost:3500/products";
-  /* this set is made live, json server link has been changed to point to the online server. the local server was deployed to render. The API_URL is the link for when it was still in the deveeloopment stage,while product_Server is for the production link */
+  /* this set is made live, json server link has been changed to point to the online server. the local server was deployed to render. The API_URL is the link for when it was still in the deveeloopment stage,while product_Server is for the production link which will be used when the siye is deployed */
   const Product_Server = "https://server-ztr9.onrender.com/products"
   const [user, setUser] = useState(null);
   const [name,  setName] = useState("");
