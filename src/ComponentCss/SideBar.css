@@ -1,3 +1,4 @@
+
 .category_items,
 .price_items,
 .color-item{
@@ -25,11 +26,11 @@
     text-transform: uppercase;
 }
 
-.sidebar .sidebar-container-tile{
+ .sidebar-container-tile{
     margin-bottom: 5px;
     text-align: center;
 }
-.sidebar .sidebar-label-contaier{
+ .sidebar-label-contaier{
     margin-bottom: 4px;
    width: 100%;
    position: relative;
@@ -37,10 +38,10 @@
     place-content: center;
     cursor: pointer;
 }
-.sidebar .sidebar-label-contaier:hover .checkmark{
+ .sidebar-label-contaier:hover .checkmark{
     background-color: #6b240c;
 }
-.sidebar .sidebar-label-contaier input{
+ .sidebar-label-contaier input{
     appearance: none;
 }
 
@@ -63,7 +64,7 @@
     left: 5px;
     top: 4px;
 }
-.sidebar .sidebar-label-contaier input:checked~.checkmark::after{
+ .sidebar-label-contaier input:checked~.checkmark::after{
     width: 6.5px;
     height: 6.5px;
    
