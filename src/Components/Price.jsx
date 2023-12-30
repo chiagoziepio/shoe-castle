@@ -1,5 +1,6 @@
 import React from 'react'
 import Label from './Label'
+import '../ComponentCss/Price.css'
 const Price = ({handleRadioClick}) => {
   return (
     <div className='price_items'>

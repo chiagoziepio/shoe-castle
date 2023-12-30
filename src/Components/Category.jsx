@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Label from './Label'
+import '../ComponentCss/Category.css'
 const Category = ({handleRadioClick}) => {
  
   return (

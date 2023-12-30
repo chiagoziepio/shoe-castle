@@ -1,5 +1,6 @@
 import React from 'react'
 import Label from './Label'
+import '../ComponentCss/Color.css'
 
 const Color = ({handleRadioClick}) => {
   return (
