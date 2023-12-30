@@ -76,6 +76,26 @@
         
     }
 }
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.category-section,
+.price-section,
+.color-section{
+    margin-bottom: 5px;
+    width: 100%;
+}
+.sidebar .sidebar-title{
+    margin: 5px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
 
 @media (max-width:620px){
     .products{
@@ -105,4 +125,8 @@
     .sidebarCloseIcon{
         display: block;
     }
+    .sidebar{
+        height: 100%;
+         justify-content: space-between;
+        }
 }

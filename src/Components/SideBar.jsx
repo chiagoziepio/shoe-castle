@@ -2,7 +2,7 @@ import React from 'react'
 import Category from './Category'
 import Color from './Color'
 import Price from './Price'
-import '../ComponentCss/sideBar.css'
+/* import '../ComponentCss/sideBar.css' */
 
 const SideBar = ({handleRadioClick}) => {
   return (
