@@ -3,7 +3,7 @@ import '../ComponentCss/Products.css'
 import {Link} from 'react-router-dom'
 import Buttons from './Buttons'
 import Card from './Card'
-import SideBar from './SideBar/SideBar'
+import SideBar from './SideBar'
 import { FaAnglesDown } from "react-icons/fa6";
 import { useRef } from 'react'
 import { IoClose } from "react-icons/io5";
